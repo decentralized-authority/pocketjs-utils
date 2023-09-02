@@ -1,4 +1,4 @@
-import crypto from 'isomorphic-webcrypto'
+import crypto from 'crypto';
 import { fromUint8Array } from 'hex-lite'
 
 /**
