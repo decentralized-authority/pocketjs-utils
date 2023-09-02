@@ -48,7 +48,9 @@ if (
   (typeof process === 'undefined' || typeof process.hrtime === 'undefined') &&
   typeof window.process === 'undefined'
 ) {
-  window.process = {} as NodeJS.Process
+  if (typeof window !== 'undefined') {
+    window.process = {} as NodeJS.Process
+  }
 }
 export const hrtime =
   typeof process.hrtime === 'undefined'
