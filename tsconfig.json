@@ -1,13 +1,25 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
   "display": "Default",
-  "extends": "../../tsconfig.json",
   "compilerOptions": {
     "baseUrl": ".",
     "composite": true,
+    "declaration": true,
     "declarationDir": "dist",
-    "declaration": true
+    "resolveJsonModule": true,
+    "declarationMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "inlineSources": false,
+    "isolatedModules": true,
+    "moduleResolution": "node",
+    "noUnusedLocals": false,
+    "noUnusedParameters": false,
+    "noImplicitAny": false,
+    "preserveWatchOutput": true,
+    "skipLibCheck": true,
+    "strict": true
   },
   "include": ["src"],
-  "exclude": ["node_modules", "dist", "jest.config.js"]
+  "exclude": ["node_modules"]
 }

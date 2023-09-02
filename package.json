@@ -13,7 +13,9 @@
   "unpkg": "./dist/index.umd.js",
   "scripts": {
     "build": "microbundle",
-    "dev": "microbundle watch"
+    "dev": "microbundle watch",
+    "test": "jest",
+    "prepare": "npm run build"
   },
   "types": "dist/src/index.d.ts",
   "keywords": [],
