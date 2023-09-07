@@ -24,12 +24,12 @@ function hexStringToByteArray(str: string): Uint8Array {
 export async function getAddressFromPublicKey(
   publicKey: string
 ): Promise<string> {
-  const hash = await crypto.subtle.digest(
-    {
-      name: 'SHA-256',
-    },
-    hexStringToByteArray(publicKey)
-  )
-
-  return fromUint8Array(new Uint8Array(hash)).slice(0, 40)
+  // const hash = await crypto.subtle.digest(
+  //   {
+  //     name: 'SHA-256',
+  //   },
+  //   hexStringToByteArray(publicKey)
+  // )
+  // return fromUint8Array(new Uint8Array(hash)).slice(0, 40)
+  return crypto.createHash('sha256').update(publicKey, 'hex').digest('hex').slice(0, 40);
 }
